@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/********************
+        normalize
+********************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol,
+ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin         : 0;
+    padding        : 0;
+    border         : 0;
+    font-size      : 100%;
+    font           : inherit;
+    vertical-align : baseline;
+    box-sizing     : border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display : block;
+
+}
+
+ol, ul {
+    list-style : none;
+}
+
+blockquote, q {
+    quotes : none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content : '';
+    content : none;
+}
+
+table {
+    border-collapse : collapse;
+    border-spacing  : 0;
+}
+
+
+:root {
+    --radius     : 20px;
+    --color      : #6853ff;
+    --text-color : rgb(141, 126, 248);
+    --border     : 1px solid #ffffff12;
+    --bg-card    : #18181fad;
+    --glassy-bg  : rgba(17, 36, 44, 0.17);
+}
+
+
+/************** Datetime Styles **************/
+.vpd-day {
+    color : #525252;
+}
+
+.vpd-day:not([disabled=true]).vpd-selected .vpd-day-effect {
+    border-radius : 13px;
+}
+
+.vpd-content {
+    border-radius    : 30px;
+    overflow         : hidden;
+    background-color : var(--bg-card) !important;
+    backdrop-filter  : blur(13px);
+}
+
+.vpd-month-label {
+    color : #434343 !important;
+}
+
+.vpd-month-label > span:hover {
+}
+
+.vpd-month-label > span:hover {
+    border-radius : 10px;
+}
+
+.vpd-year-label > span:hover {
+    border-radius : 10px;
+}
+
+.vpd-actions button {
+    border-radius : 15px;
+    width         : 33%;
+}
+
+.vpd-actions button:hover {
+    background-color : transparent !important;
+    color            : #fff !important;
+}
+
+.vpd-addon-list {
+    background      : var(--bg-card) !important;
+    backdrop-filter : blur(13px);
+}
+
+.vpd-addon-list-content {
+    display         : flex;
+    flex-wrap       : wrap;
+    justify-content : space-between;
+    padding         : 0 10px;
+    backdrop-filter : blur(13px);
+}
+
+.vpd-addon-list-item {
+    border-radius   : 20px;
+    font-size       : 1rem;
+    margin-bottom   : 5px;
+    border          : unset !important;
+    width           : 31% !important;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+}
+
+.vpd-addon-list-item.vpd-selected {
+    background-color : transparent !important;
+    border           : 1px solid var(--color) !important;
+}
+
+.vpd-close-addon {
+    border-radius : 20px;
+}
+
+.vpd-addon-list-item.vpd-selected, .vpd-addon-list-item:hover {
+    background : transparent !important;
+    color      : #ffffff;
+}
+
+.vpd-input-group {
+    border-radius  : 20px !important;
+    overflow       : hidden !important;
+    height         : 55px !important;
+    flex-direction : row-reverse !important;
+    border         : 1px solid #ffffff24 !important;
+}
+
+.vpd-input-group label {
+    margin-left : 0 !important;
+    width       : 50px !important;
+    line-height : 0 !important;
+}
+
+
+.vpd-input-group input {
+    height        : 55px !important;
+    border-radius : 0 !important;
+    border        : 0 !important;
+}
+
+.vpd-input-group label svg {
+    margin-top : -6px;
+}
+
+.vpd-icon-btn, .vpd-header {
+    background : var(--color) !important;
+}
+
+.vpd-actions *:first-child {
+    background                : var(--color);
+    color                     : #fff !important;
+    border-bottom-left-radius : 25px;
+    border                    : 1px solid var(--color);
+    line-height               : 1;
+}
+
+.vpd-actions *:first-child:hover {
+    color : var(--color) !important;
+}
+
+
+.error-class {
+    color  : #ff7373;
+    margin : 5px 10px;
+}
+
+.container-boxed {
+    -webkit-backdrop-filter : blur(20px);
+    backdrop-filter         : blur(20px);
+    background              : var(--glassy-bg);
+    padding                 : 20px;
+    border-radius           : 35px;
+    border                  : 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.container-boxed.with-link:hover {
+    border : 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.container-boxed.link-disabled {
+    border  : 2px dashed rgba(255, 255, 255, 0.2);
+    opacity : 0.4;
+}
+
+.container-boxed.link-disabled:hover {
+    border  : 2px dashed rgba(255, 255, 255, 0.1);
+    opacity : 1;
+}
+
+@keyframes rotating {
+    0% {
+        transform : rotate(0deg);
+    }
+    100% {
+        transform : rotate(360deg);
+    }
+}
+
+
+:root {
+    --size : 20px;
+}
+
+/*
+ * Portions of this code are adapted from Jhey's work.
+ * Original source: https://codepen.io/jh3y/pen/ExrWxyE
+ * author: https://codepen.io/jh3y/pen/ExrWxyE
+ */
+
+.dotted-bg {
+    background     : conic-gradient(from 180deg at 50% 70%, hsla(0, 0%, 98%, 1) 0deg, #2d57ee 72.0000010728836deg, #ec4b4b 144.0000021457672deg, #709ab9 216.00000858306885deg, #4dffbf 288.0000042915344deg, hsla(0, 0%, 98%, 1) 1turn);
+    width          : 100%;
+    height         : 100%;
+    mask           : radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
+    url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+    mask-composite : intersect;
+    animation      : flicker 20s infinite linear;
+    position: fixed;
+    opacity        : 0.4;
+}
+
+@keyframes flicker {
+    0% {
+    }
+    100% {
+        mask-position : 50% 50%, 0 50%;
+    }
+}
