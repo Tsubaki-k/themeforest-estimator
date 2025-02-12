@@ -3,7 +3,9 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build && vite build --ssr"
+        "build": "vite build && vite build --ssr",
+        "commit": "git-cz",
+        "release": "standard-version"
     },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.0",
@@ -12,10 +14,13 @@
         "@vue/server-renderer": "^3.4.0",
         "autoprefixer": "^10.4.12",
         "axios": "^1.6.4",
+        "commitizen": "^4.3.1",
+        "cz-conventional-changelog": "^3.3.0",
         "laravel-vite-plugin": "^1.0",
         "postcss": "^8.4.31",
         "sass": "^1.77.8",
         "sass-loader": "^14.2.1",
+        "standard-version": "^9.5.0",
         "tailwindcss": "^3.2.1",
         "vite": "^5.0",
         "vue": "^3.4.0"
@@ -23,5 +28,10 @@
     "dependencies": {
         "gsap": "^3.12.7",
         "vue3-persian-datetime-picker": "^1.2.2"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
 }

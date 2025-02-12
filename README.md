@@ -30,7 +30,8 @@ git clone https://github.com/Tsubaki-k/themeforest-estimator.git
 ```
 
 ## 2️⃣ Set Up Environment Variables
-Copy .env.example to .env and configure your database settings
+* **For main environment** Copy `.env.example` to `.env` and configure your database settings
+* **For test environment** copy `env.example` to `env.testing` and configure your testing database settings
 
 ## 3️⃣ Install Dependencies & generate key
 ``` sh
