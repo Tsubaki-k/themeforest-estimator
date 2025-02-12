@@ -144,19 +144,15 @@ defineProps({
                                 :is_second_price_avalible="page_data.is_second_price_avalible" >
                     </EarningBox >
 
-                    <div class="w-full md:w-1/3 pb-4 md:pr-4" >
-                        <div class="average-box earning-box" >
-                            <p class="title" >Weekly Av.</p >
-                            <p class="price" >
-                                <i class="currency_icon" >{{ page_data.price_currency }}</i >
-                                {{ page_data.average_per.week.price }}
-                            </p >
-                            <p class="currency" v-if="page_data.is_second_price_avalible" >
-                                <i class="currency_icon" >{{ page_data.second_price_currency }}</i >
-                                {{ page_data.average_per.week.second_price }}
-                            </p >
-                        </div >
-                    </div >
+                    <EarningBox class="w-full md:w-1/3 pb-4 md:pr-4"
+                                title="Weekly Av."
+                                container_class="earning-box"
+                                :price="page_data.average_per.week.price"
+                                :price_currency="page_data.price_currency"
+                                :second_price="page_data.average_per.week.second_price"
+                                :second_price_currency="page_data.second_price_currency"
+                                :is_second_price_avalible="page_data.is_second_price_avalible" >
+                    </EarningBox >
 
                     <EarningBox class="w-full md:w-1/3 pb-4 md:pr-4"
                                 title="Monthly Av."
