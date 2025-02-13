@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Enums\CurrencyEnum;
+use Database\Factories\EstimateByCustomDataFactory;
 
 class EstimateByCustomData extends Model
 {
@@ -24,5 +25,10 @@ class EstimateByCustomData extends Model
         'second_price_currency',
         'publish_date',
     ];
+
+    protected static function newFactory()
+    {
+        return EstimateByCustomDataFactory::new();
+    }
 
 }
